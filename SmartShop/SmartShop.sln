@@ -7,31 +7,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Domain", "SmartSh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Domain.Core", "SmartShop.Domain.Core\SmartShop.Domain.Core.csproj", "{732F5C3C-CB06-4498-9A58-1E2AC02363B4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4020B83D-7A91-4839-8335-D584E9716693}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Domain", "04-Domain", "{4020B83D-7A91-4839-8335-D584E9716693}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{749B7F51-D286-4F01-9958-0CA10587DD25}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Infra", "05-Infra", "{749B7F51-D286-4F01-9958-0CA10587DD25}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{92B45526-01BC-49B6-866F-CCA9D7F77B0F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Core", "03-Core", "{92B45526-01BC-49B6-866F-CCA9D7F77B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.Core", "SmartShop.Core\SmartShop.Core.csproj", "{D4C7E7CE-1D58-4773-B8AB-6120F4412034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Core", "SmartShop.Core\SmartShop.Core.csproj", "{D4C7E7CE-1D58-4773-B8AB-6120F4412034}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E698650E-7803-4E35-8888-AC3E190323B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{0D486E7D-14C3-4D20-98C1-CCC2DDF24338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.Infra.Data", "SmartShop.Infra.Data\SmartShop.Infra.Data.csproj", "{6000377C-5542-413F-A441-25DA1FD2BC38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Infra.Data", "SmartShop.Infra.Data\SmartShop.Infra.Data.csproj", "{6000377C-5542-413F-A441-25DA1FD2BC38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.Cross.Cutting.IoC", "SmartShop.Cross.Cutting.IoC\SmartShop.Cross.Cutting.IoC.csproj", "{6B76BAB3-A444-4882-9E0E-5B712616991F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Cross.Cutting.IoC", "SmartShop.Cross.Cutting.IoC\SmartShop.Cross.Cutting.IoC.csproj", "{6B76BAB3-A444-4882-9E0E-5B712616991F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Services", "02-Services", "{D77CA862-2B8A-4424-A034-46D65EE7BC7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.Services.Api", "SmartShop.Aplication.Api\SmartShop.Services.Api.csproj", "{1DEA5791-5F14-4141-A156-9205F48AFC30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Services.Api", "SmartShop.Aplication.Api\SmartShop.Services.Api.csproj", "{1DEA5791-5F14-4141-A156-9205F48AFC30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.Infra.CrossCutting.Bus", "SmartShop.Infra.CrossCutting.Bus\SmartShop.Infra.CrossCutting.Bus.csproj", "{017F28B3-9228-4119-AC60-9DB5B56BC848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Infra.CrossCutting.Bus", "SmartShop.Infra.CrossCutting.Bus\SmartShop.Infra.CrossCutting.Bus.csproj", "{017F28B3-9228-4119-AC60-9DB5B56BC848}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01- Presentation", "01- Presentation", "{C9877DC1-B20C-4296-807E-BC161D1DEFFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartShop.UI.Web", "SmartShop.UI.Web\SmartShop.UI.Web.csproj", "{1957E4F4-9153-47B4-A801-CBACF8D6BEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.UI.Web", "SmartShop.UI.Web\SmartShop.UI.Web.csproj", "{1957E4F4-9153-47B4-A801-CBACF8D6BEFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
