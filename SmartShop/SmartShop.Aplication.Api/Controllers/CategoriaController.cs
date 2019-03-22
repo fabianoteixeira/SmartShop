@@ -13,6 +13,8 @@ namespace SmartShop.Services.Api.Controllers
         {
             Bus = bus;
         }
+
+        [HttpPost]
         public ActionResult Post([FromBody] RegisterNewCategoria command)
         {
 

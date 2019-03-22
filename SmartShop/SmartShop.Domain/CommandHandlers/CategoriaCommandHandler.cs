@@ -48,8 +48,6 @@ namespace SmartShop.Domain.CommandHandlers
             return Task.FromResult(true);
         }
 
-       
-
     }
 }
 
