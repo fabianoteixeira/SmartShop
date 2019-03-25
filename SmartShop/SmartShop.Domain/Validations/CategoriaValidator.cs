@@ -10,5 +10,7 @@ namespace SmartShop.Domain.Validations
             RuleFor(x => x.Descricao)
                 .NotEmpty().WithMessage("A descrição não pode ser vazia");
         }
+
+
     }
 }

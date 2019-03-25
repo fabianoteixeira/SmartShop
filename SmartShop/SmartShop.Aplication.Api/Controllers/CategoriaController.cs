@@ -17,9 +17,8 @@ namespace SmartShop.Services.Api.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] RegisterNewCategoria command)
         {
-
-
-            return Ok(Bus.SendCommand(command));
+            var teste = Bus.SendCommand(command);
+            return Ok(command.ValidationResult.Errors);
         }
 
         
