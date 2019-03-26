@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using EventBus;
+using EventBusRabbitMQ;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SmartShop.Domain.CommandHandlers;
 using SmartShop.Domain.Commands.Categoria;
@@ -30,6 +32,8 @@ namespace SmartShop.Cross.Cutting.IoC
             //services.AddScoped<INotificationHandler<CustomerRegisteredEvent>, CustomerEventHandler>();
             //services.AddScoped<INotificationHandler<CustomerUpdatedEvent>, CustomerEventHandler>();
             //services.AddScoped<INotificationHandler<CustomerRemovedEvent>, CustomerEventHandler>();
+
+            services.AddScoped<IEventBus, EventBRabbitMQ>();
 
             // Domain - Commands
             services.AddScoped<IRequestHandler<RegisterNewCategory, bool>, CategoryCommandHandler>();
