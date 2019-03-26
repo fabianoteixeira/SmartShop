@@ -6,14 +6,14 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Usuario: Entity
+    public class User: Entity
     {
-        public int IdCliente { get; set; }
+        public Customer Customer { get; set; }
 
         public Email Email { get; set; }
 
-        public Senha Senha { get; set; }
+        public Password Password { get; set; }
 
-        public string Perfil { get; set; }
+        public string Profile { get; set; }
     }
 }

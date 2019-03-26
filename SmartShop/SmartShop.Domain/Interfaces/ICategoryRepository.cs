@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartShop.Domain.Interfaces
 {
-    public interface IRepositoryCategoria : IRepository<Categoria>
+    public interface ICategoryRepository : IRepository<Category>
     {
 
     }

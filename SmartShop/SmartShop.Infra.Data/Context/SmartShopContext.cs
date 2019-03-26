@@ -15,13 +15,13 @@ namespace SmartShop.Infra.Data.Context
             _env = env;
         }
 
-        public DbSet<Categoria> categorias { get; set; }
+        public DbSet<Category> categorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
 
-            modelBuilder.ApplyConfiguration(new MappingCategoria());
+            modelBuilder.ApplyConfiguration(new MappingCategory());
 
             base.OnModelCreating(modelBuilder);
             

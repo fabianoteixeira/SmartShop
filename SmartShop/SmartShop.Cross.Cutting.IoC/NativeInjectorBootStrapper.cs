@@ -32,12 +32,12 @@ namespace SmartShop.Cross.Cutting.IoC
             //services.AddScoped<INotificationHandler<CustomerRemovedEvent>, CustomerEventHandler>();
 
             // Domain - Commands
-            services.AddScoped<IRequestHandler<RegisterNewCategoria, bool>, CategoriaCommandHandler>();
+            services.AddScoped<IRequestHandler<RegisterNewCategory, bool>, CategoryCommandHandler>();
             //services.AddScoped<IRequestHandler<UpdateCustomerCommand, bool>, CustomerCommandHandler>();
             //services.AddScoped<IRequestHandler<RemoveCustomerCommand, bool>, CustomerCommandHandler>();
 
             // Infra - Data
-            services.AddScoped<IRepositoryCategoria, CategoriaRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<SmartShopContext>();
 

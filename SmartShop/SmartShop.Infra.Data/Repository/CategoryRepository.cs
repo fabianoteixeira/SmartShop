@@ -7,9 +7,9 @@ using System.Text;
 
 namespace SmartShop.Infra.Data.Repository
 {
-    public class CategoriaRepository : Repository<Categoria>, IRepositoryCategoria
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        public CategoriaRepository(SmartShopContext context)
+        public CategoryRepository(SmartShopContext context)
             :base(context)
         {
 

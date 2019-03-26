@@ -5,12 +5,8 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Estado: Entity
-
+    public class Manufacturer: Entity
     {
-        public string Sigla { get; set; }
-
-        public string Nome { get; set; }
-
+        public string Description { get; set; }
     }
 }

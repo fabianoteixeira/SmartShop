@@ -5,16 +5,16 @@ using System.Text;
 
 namespace SmartShop.Domain.Commands.Categoria
 {
-    public class RegisterNewCategoria : CategoriaCommand
+    public class RegisterNewCategory : CategoryCommand
     {
-        public RegisterNewCategoria(string descricao)
+        public RegisterNewCategory(string description)
         {
-            Descricao = descricao; 
+            Description = description; 
         }
 
         public override bool IsValid()
         {
-            ValidationResult = new RegisterNewCategoriaValidation().Validate(this);
+            ValidationResult = new RegisterNewCategoryValidation().Validate(this);
 
             return ValidationResult.IsValid;
         }

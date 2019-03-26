@@ -5,13 +5,13 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Categoria: Entity
+    public class Category: Entity
     {
-        public Categoria(string descricao)
+        public Category(string description)
         {
-            Descricao = descricao;
+            Description = description;
         }
 
-        public string Descricao { get; set; }
+        public string Description { get; set; }
     }
 }

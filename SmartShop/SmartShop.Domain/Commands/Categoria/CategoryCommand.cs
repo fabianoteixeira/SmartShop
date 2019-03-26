@@ -5,8 +5,8 @@ using System.Text;
 
 namespace SmartShop.Domain.Commands.Categoria
 {
-    public abstract class CategoriaCommand : Command
+    public abstract class CategoryCommand : Command
     {
-        public string Descricao { get; protected set; }
+        public string Description { get; protected set; }
     }
 }

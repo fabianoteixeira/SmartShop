@@ -3,11 +3,11 @@ using SmartShop.Domain.Commands.Categoria;
 
 namespace SmartShop.Domain.Validations
 {
-    public class CategoriaValidator<T>: AbstractValidator<T> where T: CategoriaCommand
+    public class CategoryValidator<T>: AbstractValidator<T> where T: CategoryCommand
     {
-        protected void ValidateDescricao()
+        protected void ValidateDescription()
         {
-            RuleFor(x => x.Descricao)
+            RuleFor(x => x.Description)
                 .NotEmpty().WithMessage("A descrição não pode ser vazia");
         }
 

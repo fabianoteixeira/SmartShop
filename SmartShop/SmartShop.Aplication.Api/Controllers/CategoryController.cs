@@ -6,16 +6,16 @@ namespace SmartShop.Services.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class CategoryController : ControllerBase
     {
         private readonly IMediatorHandler Bus;
-        public CategoriaController(IMediatorHandler bus)
+        public CategoryController(IMediatorHandler bus)
         {
             Bus = bus;
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] RegisterNewCategoria command)
+        public ActionResult Post([FromBody] RegisterNewCategory command)
         {
             var teste = Bus.SendCommand(command);
             return Ok(command.ValidationResult.Errors);

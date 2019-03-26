@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Senha
+    public class Password
     {
     }
 }

@@ -4,9 +4,9 @@ using SmartShop.Domain.Entities;
 
 namespace SmartShop.Infra.Data.Mapping
 {
-    public class MappingCategoria : IEntityTypeConfiguration<Categoria>
+    public class MappingCategory : IEntityTypeConfiguration<Category>
     {
-        public void Configure(EntityTypeBuilder<Categoria> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.ToTable("categoria");
 
@@ -14,7 +14,7 @@ namespace SmartShop.Infra.Data.Mapping
               .HasColumnName("id_categoria");
                 ;
 
-            builder.Property(x => x.Descricao)
+            builder.Property(x => x.Description)
                    .HasColumnName("descricao");
         }
     }

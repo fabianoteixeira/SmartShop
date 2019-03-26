@@ -5,11 +5,11 @@ using System.Text;
 
 namespace SmartShop.Domain.Validations
 {
-    public class UpdateCategoriaValidator : CategoriaValidator<UpdateCategoria>
+    public class UpdateCategoryValidator : CategoryValidator<UpdateCategory>
     {
-        public UpdateCategoriaValidator()
+        public UpdateCategoryValidator()
         {
-            ValidateDescricao();
+            ValidateDescription();
         }
     }
 }

@@ -6,25 +6,25 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Cliente : Entity
+    public class Customer : Entity
     {
-        public virtual Logradouro Logradouro { get; set; }
+        public virtual Street Street { get; set; }
 
-        public Nome Nome { get; set; }
+        public Name Name { get; set; }
 
         public Cpf cpf { get; set; }
 
         public Rg rg { get; set; }
 
-        public DateTime DataNascimento { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
-        public string Sexo { get; set; }
+        public string Gender { get; set; }
 
-        public string Telefone { get; set; }
+        public string Phone { get; set; }
 
-        public string Celular { get; set; }
+        public string CellPhone { get; set; }
 
-        public DateTime? DataCadastro { get; set; }
+        public DateTime? RegistrationDate { get; set; }
 
     }
 }

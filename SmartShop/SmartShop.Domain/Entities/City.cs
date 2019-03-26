@@ -5,11 +5,11 @@ using System.Text;
 
 namespace SmartShop.Domain.Entities
 {
-    public class Cidade: Entity
+    public class City: Entity
     {
-        public virtual Estado Estado { get; set; }
+        public virtual State State { get; set; }
 
-        public string nome { get; set; }
+        public string Name { get; set; }
 
     }
 }

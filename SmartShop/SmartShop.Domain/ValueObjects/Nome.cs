@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartShop.Domain.ValueObjects
 {
-    public class Nome 
+    public class Name 
     {
 
     }

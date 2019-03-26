@@ -12,23 +12,23 @@ using System.Threading.Tasks;
 
 namespace SmartShop.Domain.CommandHandlers
 {
-    public class CategoriaCommandHandler : CommandHandler, 
-        IRequestHandler<RegisterNewCategoria, bool>
+    public class CategoryCommandHandler : CommandHandler, 
+        IRequestHandler<RegisterNewCategory, bool>
     {
-        private IRepositoryCategoria _repositoryCategoria;
+        private ICategoryRepository _categoryRepository;
         private IMediatorHandler Bus;
 
 
-        public CategoriaCommandHandler(IRepositoryCategoria customerRepository,
+        public CategoryCommandHandler(ICategoryRepository categoryRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
         {
-            _repositoryCategoria = customerRepository;
+            _categoryRepository = categoryRepository;
             Bus = bus;
         }
 
-        public Task<bool> Handle(RegisterNewCategoria message, CancellationToken cancellationToken)
+        public Task<bool> Handle(RegisterNewCategory message, CancellationToken cancellationToken)
         {
             if (!message.IsValid())
             {
@@ -36,9 +36,9 @@ namespace SmartShop.Domain.CommandHandlers
                 return Task.FromResult(false);
             }
 
-            var categoria = new Categoria(message.Descricao);
+            var categoria = new Category(message.Description);
 
-            _repositoryCategoria.Add(categoria);
+            _categoryRepository.Add(categoria);
 
             if (Commit())
             {
