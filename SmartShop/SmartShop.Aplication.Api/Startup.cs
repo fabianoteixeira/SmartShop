@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SmartShop.Cross.Cutting.IoC;
+using SmartShop.Services.Api.Pipeline;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SmartShop.Aplication.Api
@@ -61,6 +62,11 @@ namespace SmartShop.Aplication.Api
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
+
+            app.UseExceptionHandler(new ExceptionHandlerOptions
+            {
+                ExceptionHandler = new ErrorHandlerMiddleware(env).Invoke
+            });
 
             app.UseMvc();
         }

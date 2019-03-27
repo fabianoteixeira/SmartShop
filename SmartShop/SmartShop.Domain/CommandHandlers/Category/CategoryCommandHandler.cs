@@ -13,7 +13,8 @@ using System.Threading.Tasks;
 namespace SmartShop.Domain.CommandHandlers
 {
     public class CategoryCommandHandler : CommandHandler, 
-        IRequestHandler<RegisterNewCategory, bool>
+        IRequestHandler<RegisterNewCategory, bool>,
+        IRequestHandler<UpdateCategory, bool>
     {
         private ICategoryRepository _categoryRepository;
         private IMediatorHandler Bus;
@@ -39,6 +40,27 @@ namespace SmartShop.Domain.CommandHandlers
             var categoria = new Category(message.Description);
 
             _categoryRepository.Add(categoria);
+
+            if (Commit())
+            {
+
+            }
+
+            return Task.FromResult(true);
+        }
+
+        public Task<bool> Handle(UpdateCategory message, CancellationToken cancellationToken)
+        {
+            if (!message.IsValid())
+            {
+                NotifyValidationErrors(message);
+                return Task.FromResult(false);
+            }
+
+            var category = new Category(message.Description);
+            category.Id = message.Id;
+
+            _categoryRepository.Update(category);
 
             if (Commit())
             {

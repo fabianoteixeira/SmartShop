@@ -12,5 +12,12 @@ namespace SmartShop.Domain.Validations
         }
 
 
+        protected void ValidateId()
+        {
+            RuleFor(x => x.Id)
+                .NotEmpty().WithMessage("O id não estar preenchido");
+        }
+
+
     }
 }

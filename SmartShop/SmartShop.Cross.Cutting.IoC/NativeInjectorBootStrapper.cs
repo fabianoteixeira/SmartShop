@@ -1,4 +1,5 @@
-﻿using EventBus;
+﻿using System;
+using EventBus;
 using EventBusRabbitMQ;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,7 +38,7 @@ namespace SmartShop.Cross.Cutting.IoC
 
             // Domain - Commands
             services.AddScoped<IRequestHandler<RegisterNewCategory, bool>, CategoryCommandHandler>();
-            //services.AddScoped<IRequestHandler<UpdateCustomerCommand, bool>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCategory, bool>, CategoryCommandHandler>();
             //services.AddScoped<IRequestHandler<RemoveCustomerCommand, bool>, CustomerCommandHandler>();
 
             // Infra - Data
@@ -56,6 +57,11 @@ namespace SmartShop.Cross.Cutting.IoC
 
             //// Infra - Identity
             //services.AddScoped<IUser, AspNetUser>();
+        }
+
+        private static void CategoryCommandHandler()
+        {
+            throw new NotImplementedException();
         }
     }
 }

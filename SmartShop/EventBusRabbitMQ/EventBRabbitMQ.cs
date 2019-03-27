@@ -12,7 +12,7 @@ namespace EventBusRabbitMQ
     {
         public void Dispose()
         {
-            throw new NotImplementedException();
+            GC.Collect();
         }
 
         // Implementation using RabbitMQ API
