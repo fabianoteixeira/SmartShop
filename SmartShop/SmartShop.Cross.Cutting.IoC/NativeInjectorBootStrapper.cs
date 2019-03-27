@@ -39,7 +39,7 @@ namespace SmartShop.Cross.Cutting.IoC
             // Domain - Commands
             services.AddScoped<IRequestHandler<RegisterNewCategory, bool>, CategoryCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCategory, bool>, CategoryCommandHandler>();
-            //services.AddScoped<IRequestHandler<RemoveCustomerCommand, bool>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<DeleteCategory, bool>, CategoryCommandHandler>();
 
             // Infra - Data
             services.AddScoped<ICategoryRepository, CategoryRepository>();

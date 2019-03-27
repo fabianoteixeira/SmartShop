@@ -7,6 +7,11 @@ namespace SmartShop.Domain.Commands.Categoria
 {
     public class DeleteCategory : CategoryCommand
     {
+        public DeleteCategory(int id)
+        {
+            Id = id;
+        }
+
         public override bool IsValid()
         {
             ValidationResult = new DeleteCategoryValidator().Validate(this);

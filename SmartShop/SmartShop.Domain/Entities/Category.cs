@@ -12,6 +12,13 @@ namespace SmartShop.Domain.Entities
             Description = description;
         }
 
+
+        public Category(int id, string description)
+        {
+            Id = id;
+            Description = description;
+        }
+
         public string Description { get; set; }
     }
 }

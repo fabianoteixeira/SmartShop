@@ -53,5 +53,15 @@ namespace SmartShop.Services.Api.Controllers
         }
 
 
+        [HttpDelete]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public IActionResult Delete([FromBody] CategoryPut request)
+        {
+            Bus.SendCommand(new DeleteCategory(request.Id));
+
+            return Response(request);
+
+        }
+
     }
 }

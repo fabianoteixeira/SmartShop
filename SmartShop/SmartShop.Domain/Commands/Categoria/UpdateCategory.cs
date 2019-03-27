@@ -7,11 +7,13 @@ namespace SmartShop.Domain.Commands.Categoria
 {
     public class UpdateCategory : CategoryCommand
     {
+       
         public UpdateCategory(int id, string description)
         {
             Id = id;
             Description = description;
         }
+
         public override bool IsValid()
         {
             ValidationResult = new UpdateCategoryValidator().Validate(this);

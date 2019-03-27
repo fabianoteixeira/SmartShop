@@ -14,7 +14,8 @@ namespace SmartShop.Domain.CommandHandlers
 {
     public class CategoryCommandHandler : CommandHandler, 
         IRequestHandler<RegisterNewCategory, bool>,
-        IRequestHandler<UpdateCategory, bool>
+        IRequestHandler<UpdateCategory, bool>,
+        IRequestHandler<DeleteCategory, bool>
     {
         private ICategoryRepository _categoryRepository;
         private IMediatorHandler Bus;
@@ -29,15 +30,15 @@ namespace SmartShop.Domain.CommandHandlers
             Bus = bus;
         }
 
-        public Task<bool> Handle(RegisterNewCategory message, CancellationToken cancellationToken)
+        public Task<bool> Handle(RegisterNewCategory request, CancellationToken cancellationToken)
         {
-            if (!message.IsValid())
+            if (!request.IsValid())
             {
-                NotifyValidationErrors(message);
+                NotifyValidationErrors(request);
                 return Task.FromResult(false);
             }
 
-            var categoria = new Category(message.Description);
+            var categoria = new Category(request.Description);
 
             _categoryRepository.Add(categoria);
 
@@ -49,16 +50,16 @@ namespace SmartShop.Domain.CommandHandlers
             return Task.FromResult(true);
         }
 
-        public Task<bool> Handle(UpdateCategory message, CancellationToken cancellationToken)
+        public Task<bool> Handle(UpdateCategory request, CancellationToken cancellationToken)
         {
-            if (!message.IsValid())
+            if (!request.IsValid())
             {
-                NotifyValidationErrors(message);
+                NotifyValidationErrors(request);
                 return Task.FromResult(false);
             }
 
-            var category = new Category(message.Description);
-            category.Id = message.Id;
+            var category = new Category(request.Id, request.Description);
+            
 
             _categoryRepository.Update(category);
 
@@ -70,6 +71,28 @@ namespace SmartShop.Domain.CommandHandlers
             return Task.FromResult(true);
         }
 
+        public Task<bool> Handle(DeleteCategory request, CancellationToken cancellationToken)
+        {
+            if (!request.IsValid())
+            {
+                NotifyValidationErrors(request);
+                return Task.FromResult(false);
+            }
+
+            var categoryExists = _categoryRepository.GetById(request.Id);
+
+            if(categoryExists == null)
+            {
+                NotifyValidationErrors(request);
+                return Task.FromResult(false);
+            }
+
+            _categoryRepository.Remove(request.Id);
+
+            Commit();
+
+            return Task.FromResult(true);
+        }
     }
 }
 
