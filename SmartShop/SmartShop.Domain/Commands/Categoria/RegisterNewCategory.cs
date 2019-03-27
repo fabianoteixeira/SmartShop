@@ -1,7 +1,5 @@
-﻿using SmartShop.Domain.Validations;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MediatR;
+using SmartShop.Domain.Validations;
 
 namespace SmartShop.Domain.Commands.Categoria
 {
