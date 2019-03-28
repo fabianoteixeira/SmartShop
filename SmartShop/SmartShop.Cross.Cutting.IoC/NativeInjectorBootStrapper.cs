@@ -3,6 +3,7 @@ using EventBus;
 using EventBusRabbitMQ;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using SmartShop.Core;
 using SmartShop.Domain.CommandHandlers;
 using SmartShop.Domain.Commands.Categoria;
 using SmartShop.Domain.Core.Bus;
@@ -21,6 +22,9 @@ namespace SmartShop.Cross.Cutting.IoC
         {
             // Domain Bus (Mediator)
             services.AddScoped<IMediatorHandler, InMemoryBus>();
+
+            //Pipeline Behavior
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(TracingBehavior<,>));
 
             // ASP.NET Authorization Polices
             //services.AddSingleton<IAuthorizationHandler, ClaimsRequirementHandler>();

@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\EventBusRabbitMQ\EventBusRabbitMQ.csproj" />
     <ProjectReference Include="..\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\SmartShop.Core\SmartShop.Core.csproj" />
     <ProjectReference Include="..\SmartShop.Domain.Core\SmartShop.Domain.Core.csproj" />
     <ProjectReference Include="..\SmartShop.Domain\SmartShop.Domain.csproj" />
     <ProjectReference Include="..\SmartShop.Infra.CrossCutting.Bus\SmartShop.Infra.CrossCutting.Bus.csproj" />

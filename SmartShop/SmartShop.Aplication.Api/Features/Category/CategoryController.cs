@@ -39,7 +39,11 @@ namespace SmartShop.Services.Api.Controllers
             return Response(request);
             
         }
-
+        /// <summary>
+        /// Update a category
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
