@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryFormComponent } from './pages/category/category-form/category-form.component';
-import { CoreModule } from './core/core/core.module';
+import { CoreModule } from './core/core.module';
 
 
 
