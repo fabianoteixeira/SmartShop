@@ -23,24 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-          "bower_components/font-awesome/css/font-awesome.min.css",
-          "bower_components/Ionicons/css/ionicons.min.css",
-          "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css",
-          "admLTE/css/AdminLTE.min.css",
-          "admLTE/css/skins/_all-skins.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "bower_components/jquery/dist/jquery.min.js",
-              "bower_components/bootstrap/dist/js/bootstrap.min.js",
-              "bower_components/datatables.net/js/jquery.dataTables.min.js",
-              "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js",
-              "bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
-              "bower_components/fastclick/lib/fastclick.js",
-              "admLTE/js/adminlte.min.js",
             ],
             "es5BrowserSupport": true
           },
