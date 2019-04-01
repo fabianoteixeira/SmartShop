@@ -42,6 +42,15 @@ namespace SmartShop.Aplication.Api
                 c.SwaggerDoc("v1", new Info { Title = "SmartShop", Version = "v1" });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder
+                    .SetIsOriginAllowed((host) => true)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +71,7 @@ namespace SmartShop.Aplication.Api
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
+            app.UseCors("CorsPolicy");
 
             app.UseExceptionHandler(new ExceptionHandlerOptions
             {

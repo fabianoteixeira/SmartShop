@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoryFormComponent } from 'src/app/pages/category/category-form/category-form.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
-  declarations: [CategoryFormComponent, NavBarComponent],
+  declarations: [NavBarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
-    CategoryFormComponent,
-    NavBarComponent
+    NavBarComponent,
+    HttpClientModule
   ]
 })
 export class CoreModule { }
