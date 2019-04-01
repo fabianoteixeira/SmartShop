@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using SmartShop.Domain.Commands.Categoria;
 using SmartShop.Domain.Core.Bus;
 using SmartShop.Domain.Core.Notifications;
+using SmartShop.Domain.Queries;
 using SmartShop.Services.Api.Features.Category;
+using System.Collections.Generic;
 using System.Net;
 
 namespace SmartShop.Services.Api.Controllers
@@ -14,12 +16,16 @@ namespace SmartShop.Services.Api.Controllers
     [ApiController]
     public class CategoryController : ApiController
     {
-        private readonly IMediatorHandler Bus;   
+        private readonly IMediatorHandler Bus;
+        private readonly ICategoryQueries _categegoryQueries;
         public CategoryController(
             INotificationHandler<DomainNotification> notifications,
-            IMediatorHandler mediator) : base(notifications, mediator)
+            IMediatorHandler mediator,
+            ICategoryQueries query
+            ) : base(notifications, mediator)
 
         {
+            _categegoryQueries = query;
             Bus = mediator;
         }
 
@@ -65,6 +71,12 @@ namespace SmartShop.Services.Api.Controllers
 
             return Response(request);
 
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_categegoryQueries.GetAll());
         }
 
     }

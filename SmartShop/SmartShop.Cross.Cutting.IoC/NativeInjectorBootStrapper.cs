@@ -9,6 +9,8 @@ using SmartShop.Domain.Commands.Categoria;
 using SmartShop.Domain.Core.Bus;
 using SmartShop.Domain.Core.Notifications;
 using SmartShop.Domain.Interfaces;
+using SmartShop.Domain.Queries;
+using SmartShop.Domain.Queries.Categoria;
 using SmartShop.Infra.CrossCutting.Bus;
 using SmartShop.Infra.Data.Context;
 using SmartShop.Infra.Data.Repository;
@@ -44,6 +46,10 @@ namespace SmartShop.Cross.Cutting.IoC
             services.AddScoped<IRequestHandler<RegisterNewCategory, bool>, CategoryCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCategory, bool>, CategoryCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCategory, bool>, CategoryCommandHandler>();
+
+
+            // Domain - Queries
+            services.AddScoped<ICategoryQueries, CategoryQuery>();
 
             // Infra - Data
             services.AddScoped<ICategoryRepository, CategoryRepository>();
