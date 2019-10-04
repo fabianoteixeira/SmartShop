@@ -15,7 +15,7 @@ namespace SmartShop.Infra.Data.Context
             _env = env;
         }
 
-        public DbSet<Category> categorias { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

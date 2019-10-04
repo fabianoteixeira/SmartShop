@@ -1,4 +1,4 @@
-﻿using SmartShop.Domain.Commands.Categoria;
+﻿using SmartShop.Domain.Commands.Category;
 using System;
 using System.Collections.Generic;
 using System.Text;

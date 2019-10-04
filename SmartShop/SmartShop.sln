@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.Domain", "SmartShop.Domain\SmartShop.Domain.csproj", "{EE89E2A4-1BF4-4644-91F7-868E20EE229D}"
 EndProject
@@ -35,9 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartShop.UI.Web", "SmartSh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-EventBus", "06-EventBus", "{8865C275-CA68-4BAA-8296-47C98EA9B925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus", "EventBus\EventBus.csproj", "{4B87A849-84A7-42DE-A48B-DD038FC3C7C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "EventBus\EventBus.csproj", "{4B87A849-84A7-42DE-A48B-DD038FC3C7C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{4EA8E094-886A-432D-A9BD-20429EBF31D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{4EA8E094-886A-432D-A9BD-20429EBF31D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 - IdentityServer", "07 - IdentityServer", "{7DA8D137-4343-42F5-9A72-B945BCDF5837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +89,10 @@ Global
 		{4EA8E094-886A-432D-A9BD-20429EBF31D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EA8E094-886A-432D-A9BD-20429EBF31D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EA8E094-886A-432D-A9BD-20429EBF31D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +110,7 @@ Global
 		{1957E4F4-9153-47B4-A801-CBACF8D6BEFD} = {C9877DC1-B20C-4296-807E-BC161D1DEFFD}
 		{4B87A849-84A7-42DE-A48B-DD038FC3C7C9} = {8865C275-CA68-4BAA-8296-47C98EA9B925}
 		{4EA8E094-886A-432D-A9BD-20429EBF31D6} = {8865C275-CA68-4BAA-8296-47C98EA9B925}
+		{BEA44CAD-6A92-46B2-A9F4-945F2324D3EE} = {7DA8D137-4343-42F5-9A72-B945BCDF5837}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40258FE9-7326-48CE-B011-171A211D0614}

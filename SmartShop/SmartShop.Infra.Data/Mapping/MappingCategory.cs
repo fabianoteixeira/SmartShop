@@ -8,14 +8,14 @@ namespace SmartShop.Infra.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.ToTable("categoria");
+            builder.ToTable("Category");
 
             builder.Property(x => x.Id)
-              .HasColumnName("id_categoria");
+              .HasColumnName("id");
                 ;
 
             builder.Property(x => x.Description)
-                   .HasColumnName("descricao");
+                   .HasColumnName("descritpion");
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using SmartShop.Domain.Validations;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using FluentValidation;
+using SmartShop.Domain.Validations;
 
-namespace SmartShop.Domain.Commands.Categoria
+namespace SmartShop.Domain.Commands.Category
 {
     public class UpdateCategory : CategoryCommand
     {

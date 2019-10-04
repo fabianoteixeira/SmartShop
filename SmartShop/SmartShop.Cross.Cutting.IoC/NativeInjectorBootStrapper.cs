@@ -5,7 +5,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SmartShop.Core;
 using SmartShop.Domain.CommandHandlers;
-using SmartShop.Domain.Commands.Categoria;
+using SmartShop.Domain.Commands.Category;
 using SmartShop.Domain.Core.Bus;
 using SmartShop.Domain.Core.Notifications;
 using SmartShop.Domain.Interfaces;

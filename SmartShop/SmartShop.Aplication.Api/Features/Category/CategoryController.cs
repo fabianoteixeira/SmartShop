@@ -2,7 +2,7 @@
 using EventBus.Events;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SmartShop.Domain.Commands.Categoria;
+using SmartShop.Domain.Commands.Category;
 using SmartShop.Domain.Core.Bus;
 using SmartShop.Domain.Core.Notifications;
 using SmartShop.Domain.Queries;

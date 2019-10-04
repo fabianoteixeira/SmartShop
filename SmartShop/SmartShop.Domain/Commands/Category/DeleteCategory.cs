@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartShop.Domain.Commands.Categoria
+namespace SmartShop.Domain.Commands.Category
 {
     public class DeleteCategory : CategoryCommand
     {

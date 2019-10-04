@@ -1,6 +1,6 @@
 ﻿using SmartShop.Domain.Core.Commands;
 
-namespace SmartShop.Domain.Commands.Categoria
+namespace SmartShop.Domain.Commands.Category
 {
     public abstract class CategoryCommand : Command
     {

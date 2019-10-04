@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using SmartShop.Domain.Validations;
 
-namespace SmartShop.Domain.Commands.Categoria
+namespace SmartShop.Domain.Commands.Category
 {
     public class RegisterNewCategory : CategoryCommand
     {

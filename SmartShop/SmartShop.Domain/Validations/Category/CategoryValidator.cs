@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using SmartShop.Domain.Commands.Categoria;
+using SmartShop.Domain.Commands.Category;
 
 namespace SmartShop.Domain.Validations
 {
