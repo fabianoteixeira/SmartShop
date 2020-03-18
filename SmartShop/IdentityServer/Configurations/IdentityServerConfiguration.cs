@@ -13,8 +13,7 @@ namespace IdentityServer.Configurations
 
             // configure identity server with in-memory stores, keys, clients and scopes
             services.AddIdentityServer()
-                .AddTestUsers(Config.GetUsers())
-                // this adds the config data from DB (clients, resources)
+                
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = b =>

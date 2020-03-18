@@ -3,7 +3,6 @@ using EventBus.Events;
 using EventBus.Interfaces;
 using RabbitMQ.Client;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace EventBusRabbitMQ

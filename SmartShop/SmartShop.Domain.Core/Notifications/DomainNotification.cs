@@ -1,7 +1,5 @@
 ﻿using SmartShop.Domain.Core.Events;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SmartShop.Domain.Core.Notifications
 {

@@ -1,13 +1,10 @@
-﻿using EventBus;
-using EventBus.Events;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SmartShop.Domain.Commands.Category;
 using SmartShop.Domain.Core.Bus;
 using SmartShop.Domain.Core.Notifications;
 using SmartShop.Domain.Queries;
 using SmartShop.Services.Api.Features.Category;
-using System.Collections.Generic;
 using System.Net;
 
 namespace SmartShop.Services.Api.Controllers
